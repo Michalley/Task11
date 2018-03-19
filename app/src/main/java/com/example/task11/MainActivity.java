@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btn1;
@@ -42,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
         }
         if (rb3.isChecked()) {
             lay.setBackgroundColor(getResources().getColor(R.color.Blue));
+        }
+        if ((rb1.isChecked()==false)&&(rb2.isChecked()==false)&&(rb3.isChecked()==false)){
+            Toast.makeText(this,"Chose a Color",Toast.LENGTH_SHORT).show();
         }
     }
 
